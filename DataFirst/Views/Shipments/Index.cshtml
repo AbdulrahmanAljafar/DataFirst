@@ -1,0 +1,28 @@
+﻿@{
+    var Shipments = (List<Shipment>)ViewData["Shipments"];
+}
+
+<div class="main-content">
+    <table class="table">
+        <tr>
+            <th>Id</th>
+            <th>DateOfDelivery</th>
+            <th>
+                LocationOfDelivery
+            </th>
+            <th>CustomerIdInt</th>
+            <th>ProductIdInt</th>
+
+        </tr>
+        @foreach (var Shipment in Shipments)
+        {
+            <tr>
+                <td>@Html.DisplayFor(m => Shipment.Id)</td>
+                <td>@Html.DisplayFor(m => Shipment.DateOfDelivery)</td>
+                <td>@Html.DisplayFor(m => Shipment.LocationOfDelivery)</td>
+                <td>@Html.DisplayFor(m => Shipment.CustomerIdInt)</td>
+                <td>@Html.DisplayFor(m => Shipment.ProductIdInt)</td>
+            </tr>
+        }
+    </table>
+</div>

@@ -1,0 +1,27 @@
+﻿@{
+    var Products = (List<Product>)ViewData["Products"];
+}
+
+<div class="main-content">
+    <table class="table">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>
+                Description
+            </th>
+            <th>Price</th>
+
+        </tr>
+        @foreach (var Product in Products)
+        {
+            <tr>
+                <td>@Html.DisplayFor(m => Product.Id)</td>
+                <td>@Html.DisplayFor(m => Product.Name)</td>
+                <td>@Html.DisplayFor(m => Product.Description)</td>
+                <td>@Html.DisplayFor(m => Product.Price)</td>
+                
+            </tr>
+}
+    </table>
+</div>

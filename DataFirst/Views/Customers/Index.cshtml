@@ -1,0 +1,28 @@
+﻿
+@{ 
+    var Customers = (List<Join>) ViewData["Customers"];
+ }
+<div class="main-content">
+    <table class="table">
+        <tr>
+            <th>DateOfDelivery</th>
+            <th>LocationOfDelivery</th>
+            <th>
+                product_name
+            </th>
+            <th>customer_name</th>
+            
+
+        </tr>
+        @foreach (Join Customer in Customers)
+        {
+    <tr>
+        <td>@Customer.DateOfDelivery</td>
+        <td>@Customer.LocationOfDelivery</td>
+        <td>@Customer.product_name</td>
+        <td>@Customer.customer_name</td>
+
+    </tr>
+        }
+    </table>
+</div>
